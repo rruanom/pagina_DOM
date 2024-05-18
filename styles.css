@@ -1,0 +1,18 @@
+.encabezado {
+ background-color: black;
+ min-width: 100%;
+ height: 20vh;
+ position: absolute;
+ left:0; 
+ right:0; 
+ top:0;
+ text-align: center;
+}
+.titulo {
+    font: 20rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin: -25px 0 0 -25px;
+}

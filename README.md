@@ -1,0 +1,1 @@
+# Proyecto propuesto. Crear la estructura básica de una página a partir de un boceto con HTML y CSS. Hacer que la imagen de la portada cambie cada vez que refrescamos. Hacer una lista desplegable. Crear las imagenes que vienen a continuacion de la portada. Todas las funcionalidades crearlas a  traves del DOM.
