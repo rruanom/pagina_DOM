@@ -103,3 +103,19 @@ function crearLista(){
     }
 };
 crearLista();
+
+//7.Escuchar la opcion de la lista y cambiar las imagenes del DOM
+/*function cambiarImagenes (){
+    let select = document.querySelector(select);
+    select.addEventListener("change", function(e){
+        const articulos = document.querySelectorAll(".imagen_viaje");
+        articulos.forEach(function(el){
+            let imagenAleatoria = crearImagen(listaViajes, textosViajes);
+            let imagen = el.lastElementChild
+            imagen.setAttribute("src", imagenAleatoria[0]);
+            imagen.setAttribute("alt", imagenAleatoria[1]);
+            imagen.setAttribute("title", imagenAleatoria[1]);
+        })
+    })
+}
+cambiarImagenes();/*
