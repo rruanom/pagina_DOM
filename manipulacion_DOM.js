@@ -3,7 +3,7 @@ Hacer una funcion que saque las fotos y un texto asociado a cada foto con sentid
 */
 //Variables
 let listaBanner = ["banner/1.jpg", "banner/2.jpg", "banner/3.jpg", "banner/4.jpg", "banner/5.jpg", "banner/6.jpg", "banner/7.jpg", "banner/8.jpg"];
-let textosBanner = ["texto0", "texto1", "texto2", "texto3", "texto4", "texto5", "texto6", "texto7"];
+let textosBanner = ["Anochecer en Valdelahiguera", "La extinción del helio", "Qemtrails, Dubai intentando que llueva", "¿Por que disfrutar del campo si puedes acabar con el helio del planeta?", "Esta foto la hice cuando termine este proyecto: 2am", "Por aquí murio Gandalf luchando contra el Balrog", "Tiro a la paloma edicion ciegos", "Si la choni de mi pueblo fuese a Hogwarts, esta sería sin duda su varita"];
 let listaCiudades = ["Bilbao", "Teruel", "Sevilla", "Mostoles", "Azuqueca de Henares", "Valdelaparra de abajo"]
 let listaViajes = ["viajes/viajes-1.jpg", "viajes/viajes-2.jpg", "viajes/viajes-3.jpg", "viajes/viajes-4.jpg", "viajes/viajes-5.jpg", "viajes/viajes-6.jpg", "viajes/viajes-7.jpg"];
 let textosViajes = ["Gozadera en hamaca", "Camino al paraiso", "Mas perdido que el Pirri", "Viva Sevilla!", "Ole, ole y ole", "La curva del agujero", "Mi humilde castillo"]
@@ -33,8 +33,9 @@ function alternarImagenes(listaImagenes, listaTextos){
 
 //2. Funcion para crear una imagen con parametros un array y un texto.
 function crearImagen(jpgImagenes, textos){
-    let jpgImagen = alternarImagenes(jpgImagenes, textos)[0];
-    let texto = alternarImagenes(jpgImagenes, textos)[1];
+    let imagenNueva = alternarImagenes(jpgImagenes, textos);
+    let jpgImagen = imagenNueva[0];
+    let texto = imagenNueva[1];
     const imagen = document.createElement("img");
     imagen.setAttribute("src", jpgImagen);
     imagen.setAttribute("alt", texto);
