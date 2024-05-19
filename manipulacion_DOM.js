@@ -104,18 +104,30 @@ function crearLista(){
 };
 crearLista();
 
-//7.Escuchar la opcion de la lista y cambiar las imagenes del DOM
-/*function cambiarImagenes (){
-    let select = document.querySelector(select);
-    select.addEventListener("change", function(e){
-        const articulos = document.querySelectorAll(".imagen_viaje");
-        articulos.forEach(function(el){
-            let imagenAleatoria = crearImagen(listaViajes, textosViajes);
-            let imagen = el.lastElementChild
+//7.Escuchar la opcion de la lista y cambiar las imagenes y los textos del DOM sin repetir ninguno.
+function cambiarImagenes (){
+    let padre = document.querySelector("select");
+    padre.addEventListener("change", function(e){
+        const fotos = document.querySelectorAll(".imagen_viaje");
+        let imagen;
+        let arrayComparacion=[];
+        let imagenAleatoria=[];
+        fotos.forEach(function(e){
+            do {
+                imagenAleatoria = alternarImagenes(listaViajes, textosViajes);
+                arrayComparacion.push(imagenAleatoria[0])
+            } while (arrayComparacion.indexOf(imagenAleatoria[0]) !== arrayComparacion.length-1)
+            imagen = e.lastElementChild
             imagen.setAttribute("src", imagenAleatoria[0]);
             imagen.setAttribute("alt", imagenAleatoria[1]);
             imagen.setAttribute("title", imagenAleatoria[1]);
+            let articulo = e.nextElementSibling;
+            let indice = listaViajes.indexOf(imagenAleatoria[0]);
+            let titulo = articulo.firstElementChild;
+            titulo.textContent = textosViajes[indice];
+            let parrafo = articulo.lastElementChild;
+            parrafo.textContent = parrafosLocos[indice];
         })
     })
 }
-cambiarImagenes();/*
+cambiarImagenes();
