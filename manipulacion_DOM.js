@@ -24,7 +24,7 @@ let parrafosLocos = ["mola mucho la playa, pero un verano en THE BRIDGE mola mas
 //Eventos
 
 //Funciones
-//1. crea una imagen y un texto aleatorios relacionados (no conseguido) a partir de dos listas
+//1. crea una imagen y un texto aleatorios relacionados a partir de dos listas
 function alternarImagenes(listaImagenes, listaTextos){
     let img_text = [];
     let imagenAleatoria;
@@ -99,6 +99,7 @@ crearArticulos()
 function crearLista(){
     const destinos = document.querySelector(".destinos");
     const titulo = document.createElement("h2");
+    titulo.setAttribute("class", "subtitulo");
     const lista = document.createElement("select")
     lista.setAttribute("name", "listaDesplegable")
     destinos.appendChild(titulo);
