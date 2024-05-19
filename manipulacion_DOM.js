@@ -3,7 +3,14 @@ Hacer una funcion que saque las fotos y un texto asociado a cada foto con sentid
 */
 //Variables
 let listaBanner = ["banner/1.jpg", "banner/2.jpg", "banner/3.jpg", "banner/4.jpg", "banner/5.jpg", "banner/6.jpg", "banner/7.jpg", "banner/8.jpg"];
-let textosBanner = ["Anochecer en Valdelahiguera", "La extinción del helio", "Qemtrails, Dubai intentando que llueva", "¿Por que disfrutar del campo si puedes acabar con el helio del planeta?", "Esta foto la hice cuando termine este proyecto: 2am", "Por aquí murio Gandalf luchando contra el Balrog", "Tiro a la paloma edicion ciegos", "Si la choni de mi pueblo fuese a Hogwarts, esta sería sin duda su varita"];
+let textosBanner = ["Anochecer en Valdelahiguera", 
+"La carrera mas aburrida del planeta", 
+"Qemtrails, Dubai intentando que llueva", 
+"¿Por que disfrutar del campo si puedes acabar con el helio del planeta?", 
+"Esta foto la hice cuando termine este proyecto: 2am", 
+"Por aquí murio Gandalf luchando contra el Balrog", 
+"Tiro a la paloma edicion ciegos", 
+"Si la choni de mi pueblo fuese a Hogwarts, esta sería sin duda su varita"];
 let listaCiudades = ["Bilbao", "Teruel", "Sevilla", "Mostoles", "Azuqueca de Henares", "Valdelaparra de abajo"]
 let listaViajes = ["viajes/viajes-1.jpg", "viajes/viajes-2.jpg", "viajes/viajes-3.jpg", "viajes/viajes-4.jpg", "viajes/viajes-5.jpg", "viajes/viajes-6.jpg", "viajes/viajes-7.jpg"];
 let textosViajes = ["Gozadera en hamaca", "Camino al paraiso", "Mas perdido que el Pirri", "Viva Sevilla!", "Ole, ole y ole", "La curva del agujero", "Mi humilde castillo"]
