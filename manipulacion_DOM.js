@@ -1,5 +1,6 @@
 /*
 Hacer una funcion que saque las fotos y un texto asociado a cada foto con sentido. Ej: 1.jpg con el texto: este es el jpg 1.
+Hacer que la lista desplegable pueda cambiar el title y el alt de cada imagen a voluntad (no terminado).
 */
 //Variables
 let listaBanner = ["banner/1.jpg", "banner/2.jpg", "banner/3.jpg", "banner/4.jpg", "banner/5.jpg", "banner/6.jpg", "banner/7.jpg", "banner/8.jpg"];
@@ -56,7 +57,6 @@ function imagenPortada(){
     let elemento1 = document.querySelector(".imagen_portada");
     elemento1.appendChild(imagenPortada);
 };
-setTimeout(imagenPortada(), 500);//tengo que meter tiempo porque si no, lee antes el js que el DOM y da null.
 
 /*no se como manipular elementos de un Node.object de HTML. 
 let a = document.getElementsByClassName("imagen_portada");
@@ -76,7 +76,6 @@ function imagenArticulo(){
     }
     )
 };
-imagenArticulo();
 
 //5. crear un titulo y un comentario dependiendo de la imagen que salga.
 function crearArticulos(){
@@ -93,7 +92,6 @@ function crearArticulos(){
         hijo2.textContent = parrafosLocos[indice];
     })
 };
-crearArticulos()
 
 //6. crear una lista desplegable que según elijas construya un texto y un titulo en la seccion de las imagenes.
 function crearLista(){
@@ -107,11 +105,12 @@ function crearLista(){
     destinos.appendChild(lista);
     for (let i = 0; i < listaCiudades.length; i++){
         let ciudad = document.createElement("option");
+        ciudad.value = listaCiudades[i];
         ciudad.textContent = listaCiudades[i];
         lista.appendChild(ciudad);
     }
 };
-crearLista();
+
 
 //7.Escuchar la opcion de la lista y cambiar las imagenes y los textos del DOM sin repetir ninguno.
 function cambiarImagenes (){
@@ -139,4 +138,9 @@ function cambiarImagenes (){
         })
     })
 }
+
+setTimeout(imagenPortada(), 500);//tengo que meter tiempo porque si no, lee antes el js que el DOM y da null.
+imagenArticulo();
+crearArticulos()
+crearLista();
 cambiarImagenes();
